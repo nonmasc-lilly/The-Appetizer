@@ -62,6 +62,13 @@ get_line: ; rcx is buffer, rdx is buffer length
     pop rdi
     pop rcx
     pop rdx
+    cmp rax, 0x8
+    jne .cont
+    lea rdi, [rcx+rbx-2]
+    mov word [rdi], 0x0
+    sub rbx, 2
+    jmp .loop
+.cont:
     
     lea rdi, [rcx+rbx]
     mov [rdi], ax

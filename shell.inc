@@ -3,6 +3,8 @@
 
 shell_main:
 .loop:
+    mov rcx, shell_intro
+    call print
     mov rcx, ShellInput
     mov rdx, SHELL_LEN
     call get_line

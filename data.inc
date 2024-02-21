@@ -1,4 +1,6 @@
 
+shell_intro: du "USER> ", 0x0
+
 command_string:
     .EXT:   du "EXT", 0xD, 0xA, 0x0
     .LIST:  du "LIST", 0x0
